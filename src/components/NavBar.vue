@@ -1,14 +1,13 @@
 <template>
   <nav>
-    <a href="#hero" class="nav-logo">tanoh@jude:~$</a>
+    <router-link to="/" class="nav-logo">tanoh@jude:~$</router-link>
 
     <div class="nav-actions">
       <ul class="nav-links">
-        <li><a href="#projects-featured">Projets</a></li>
-        <li><a href="#skills">Competences</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#about">A propos</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><router-link to="/portfolio#projects-featured">Projets</router-link></li>
+        <li><router-link to="/portfolio#skills">Competences</router-link></li>
+        <li><router-link to="/portfolio#cv">CV</router-link></li>
+        <li><router-link to="/portfolio#contact">Contact</router-link></li>
       </ul>
 
       <button class="theme-toggle" type="button" @click="toggleTheme">
