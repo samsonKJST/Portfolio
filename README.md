@@ -32,6 +32,12 @@ npm run build
 
 Le résultat est généré dans le dossier `dist/`, prêt à être déployé (Netlify, Vercel, GitHub Pages, etc.).
 
+## Assistant IA
+
+Le chatbot appelle la fonction Netlify `/.netlify/functions/portfolio-assistant`. La clé Gemini reste uniquement côté serveur : ajoutez `GEMINI_API_KEY` dans les variables d'environnement Netlify. Ne créez pas de variable `VITE_GEMINI_API_KEY` : les variables `VITE_*` sont intégrées au navigateur.
+
+À chaque message, le navigateur envoie l'historique de la session à la fonction. Celle-ci transmet au modèle les 16 derniers messages et la base de connaissances de `src/data/profile.js`, qui regroupe les informations disponibles du CV, de LinkedIn et du portfolio. Les boutons de suggestion envoient simplement une question au même modèle.
+
 ## Fichiers importants
 - `public/photo.jpg` — ta photo de profil
 - `public/CV_KOUAME_JUDE_SAMSON_TANOH.pdf` — ton CV téléchargeable
