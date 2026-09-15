@@ -8,11 +8,11 @@
       <a href="https://www.linkedin.com/in/jude-samson-tanoh-kouame-76032a38b/" target="_blank" @click="open = false">LinkedIn ↗</a>
       <a class="nav-cv" href="/CV_KOUAME_JUDE_SAMSON_TANOH.pdf" target="_blank" @click="open = false">CV ↗</a>
     </nav>
-    <span class="availability"><i></i> OPEN TO OPPORTUNITIES</span>
+    <span class="availability"><i></i> OUVERT AUX OPPORTUNITÉS</span>
   </header>
 </template>
 <script setup>
 import { ref } from 'vue'
 const open = ref(false)
-const items = [{ label: 'About', href: '#about' }, { label: 'Skills', href: '#skills' }, { label: 'Projects', href: '#projects' }, { label: 'Process', href: '#process' }, { label: 'Contact', href: '#contact' }]
+const items = [{ label: 'À propos', href: '#about' }, { label: 'Compétences', href: '#skills' }, { label: 'Projets', href: '#projects' }, { label: 'Méthode', href: '#process' }, { label: 'Contact', href: '#contact' }]
 </script>

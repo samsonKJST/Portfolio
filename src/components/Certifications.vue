@@ -1,19 +1,19 @@
 <template>
   <section id="journey" class="section journey">
-    <p class="eyebrow">05 / MY JOURNEY</p>
-    <div class="split-heading"><h2>Education <em>&</em><br>certifications.</h2><p>Un parcours en construction, renforcé par des formations qui soutiennent directement mes projets Data, AI et Software.</p></div>
+    <p class="eyebrow">05 / PARCOURS</p>
+    <div class="split-heading"><h2>Formation <em>&</em><br>certifications.</h2><p>Un parcours en construction, renforcé par des formations qui soutiennent directement mes projets Data, IA et logiciel.</p></div>
     <div class="journey-line">
-      <article class="journey-current"><span class="journey-kicker">CURRENT PATH</span><div><span class="journey-dot progress"></span><p class="journey-type">EPITECH</p><h3>Parcours RNCP</h3><p class="journey-status progress">● IN PROGRESS</p></div></article>
-      <div class="journey-featured"><p class="journey-kicker">FEATURED CERTIFICATIONS</p><article v-for="certificate in featured" :key="certificate.title" class="certificate-card"><div><span class="journey-dot"></span><p class="journey-type">{{ certificate.provider }} <em v-if="certificate.category">/ {{ certificate.category }}</em></p><h3>{{ certificate.title }}</h3><p class="journey-status">✓ COMPLETED</p></div><a :href="certificate.href" target="_blank" rel="noopener noreferrer">VIEW CERTIFICATE ↗</a></article></div>
-      <div class="journey-complementary"><p class="journey-kicker">COMPLEMENTARY LEARNING</p><div class="compact-certificates"><article v-for="certificate in complementary" :key="certificate.title"><div><p>{{ certificate.title }}</p><span>{{ certificate.provider }} · ✓ COMPLETED</span></div><a v-if="certificate.href" :href="certificate.href" target="_blank" rel="noopener noreferrer" :aria-label="`Voir le certificat ${certificate.title}`">↗</a></article></div></div>
+      <article class="journey-current"><span class="journey-kicker">PARCOURS ACTUEL</span><div><span class="journey-dot progress"></span><p class="journey-type">EPITECH</p><h3>Parcours RNCP</h3><p class="journey-status progress">● EN COURS</p></div></article>
+      <div class="journey-featured"><p class="journey-kicker">CERTIFICATIONS À LA UNE</p><article v-for="certificate in featured" :key="certificate.title" class="certificate-card"><div><span class="journey-dot"></span><p class="journey-type">{{ certificate.provider }} <em v-if="certificate.category">/ {{ certificate.category }}</em></p><h3>{{ certificate.title }}</h3><p class="journey-status">✓ TERMINÉE</p></div><a :href="certificate.href" target="_blank" rel="noopener noreferrer">VOIR LE CERTIFICAT ↗</a></article></div>
+      <div class="journey-complementary"><p class="journey-kicker">FORMATIONS COMPLÉMENTAIRES</p><div class="compact-certificates"><article v-for="certificate in complementary" :key="certificate.title"><div><p>{{ certificate.title }}</p><span>{{ certificate.provider }} · ✓ TERMINÉE</span></div><a v-if="certificate.href" :href="certificate.href" target="_blank" rel="noopener noreferrer" :aria-label="`Voir le certificat ${certificate.title}`">↗</a></article></div></div>
     </div>
   </section>
 </template>
 <script setup>
 const featured = [
-  { title: 'DATA / IA', provider: 'GIZ', category: 'DATA & AI', href: 'https://drive.google.com/file/d/1wZPP0mm-rccdxu5ovXEft67ogM6yNZyx/view?usp=sharing' },
-  { title: 'Objectif IA : initiez-vous à l’intelligence artificielle', provider: 'OpenClassrooms', category: 'AI / MACHINE LEARNING', href: 'https://drive.google.com/file/d/1_35uTPovTR7A3SCBCHzaa5ybTrj6-voD/view?usp=sharing' },
-  { title: 'HTML & CSS', provider: 'OpenClassrooms', category: 'SOFTWARE', href: 'https://drive.google.com/file/d/1XngvLGNbl3UGh3FCOdIKObpHosYo88Qi/view?usp=sharing' }
+  { title: 'DATA / IA', provider: 'GIZ', category: 'DATA & IA', href: 'https://drive.google.com/file/d/1wZPP0mm-rccdxu5ovXEft67ogM6yNZyx/view?usp=sharing' },
+  { title: 'Objectif IA : initiez-vous à l’intelligence artificielle', provider: 'OpenClassrooms', category: 'IA / MACHINE LEARNING', href: 'https://drive.google.com/file/d/1_35uTPovTR7A3SCBCHzaa5ybTrj6-voD/view?usp=sharing' },
+  { title: 'HTML & CSS', provider: 'OpenClassrooms', category: 'LOGICIEL', href: 'https://drive.google.com/file/d/1XngvLGNbl3UGh3FCOdIKObpHosYo88Qi/view?usp=sharing' }
 ]
 const complementary = [
   { title: 'Basic Information Literacy', provider: 'Coursera', href: 'https://drive.google.com/file/d/1ynKbvDwZXBr6zvrEUoeKL5gV4H6ND0Fx/view?usp=sharing' },

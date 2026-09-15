@@ -1,8 +1,8 @@
 <template>
   <aside class="assistant" :class="{ open }" aria-label="Assistant du portfolio">
-    <button v-if="!open" class="assistant-fab" type="button" @click="open = true"><span>✦</span> ASK JUDE’S ASSISTANT</button>
+    <button v-if="!open" class="assistant-fab" type="button" @click="open = true"><span>✦</span> ASSISTANT DE JUDE</button>
     <section v-else class="assistant-panel">
-      <header><div><span>PORTFOLIO ASSISTANT</span><strong>Ask about Jude’s work.</strong></div><button type="button" @click="open = false" aria-label="Fermer l’assistant">×</button></header>
+      <header><div><span>ASSISTANT DU PORTFOLIO</span><strong>Une question sur le parcours de Jude ?</strong></div><button type="button" @click="open = false" aria-label="Fermer l’assistant">×</button></header>
       <div ref="feed" class="assistant-feed"><div v-for="(message,index) in messages" :key="index" :class="['assistant-message', message.role === 'assistant' ? 'bot' : 'user']" v-html="renderMarkdown(message.text)"></div><p v-if="loading" class="assistant-message assistant-loading">Analyse du contexte…</p></div>
       <div class="quick-questions"><button v-for="question in quickQuestions" :key="question" type="button" :disabled="loading" @click="ask(question)">{{ question }}</button></div>
       <form @submit.prevent="ask(input)"><label class="sr-only" for="assistant-input">Votre question</label><input id="assistant-input" v-model="input" :disabled="loading" placeholder="Posez une question…"><button :disabled="loading || !input.trim()">↗</button></form>
